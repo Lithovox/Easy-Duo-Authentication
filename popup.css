@@ -53,7 +53,6 @@ a {
 
 #passcode {
     text-decoration: none;
-    margin-left: 85px; 
     font-size: 30px; 
     color: #ff5722;
     margin-top: 10px;
@@ -69,4 +68,20 @@ a {
     outline: none;
     border: none;
     margin-right: 3px;
+}
+
+#copy {
+    font-size: 15px;
+    padding: 8px 25px;
+    border-radius: 15px;
+    background: #ff5722;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+
+.center-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

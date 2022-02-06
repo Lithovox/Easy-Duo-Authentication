@@ -2,7 +2,7 @@
 
 chrome.storage.sync.get(null, function (data) {
     let HOTPSecret = data.HOTPSecret;
-    if (HOTPSecret == undefined) // the user has not submitted a correct activation link
+    if (HOTPSecret = undefined) // the user has not submitted a correct activation link
     {
         document.getElementById('submit').onclick = function () {
             // Get HOTP secret from Duo
@@ -60,6 +60,10 @@ chrome.storage.sync.get(null, function (data) {
             chrome.storage.sync.set({ passcodes });
             chrome.storage.sync.set({ count });
         };
+
+        document.getElementById('copy').onclick = function () {
+            navigator.clipboard.writeText(passcodes[count]);
+        }
 
         let count = data.count;
         let passcodes = data.passcodes;
