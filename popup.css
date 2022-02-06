@@ -55,8 +55,7 @@ a {
     text-decoration: none;
     font-size: 30px; 
     color: #ff5722;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 5px 12px 10px 45px; 
 }
 
 #next, #prev {
@@ -71,17 +70,17 @@ a {
 }
 
 #copy {
-    font-size: 15px;
-    padding: 8px 25px;
+    font-size: 18px;
+    padding: 0px 15px 0px 15px;
     border-radius: 15px;
     background: #ff5722;
     color: #fff;
     outline: none;
-    border: none;
+    border: none; 
+    margin-top: 7px;
+    height: 35px;
 }
 
-.center-block {
+#center-block {
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }

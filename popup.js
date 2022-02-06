@@ -63,6 +63,7 @@ chrome.storage.sync.get(null, function (data) {
 
         document.getElementById('copy').onclick = function () {
             navigator.clipboard.writeText(passcodes[count]);
+            document.getElementById('copy').innerHTML = 'Copied!';
         }
 
         let count = data.count;
