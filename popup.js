@@ -61,6 +61,10 @@ chrome.storage.sync.get(null, function (data) {
             chrome.storage.sync.set({ count });
         };
 
+        document.getElementById('copy').onclick = function () {
+            navigator.clipboard.writeText(passcodes[count]);
+        }
+
         let count = data.count;
         let passcodes = data.passcodes;
         HOTPSecret = data.HOTPSecret;
