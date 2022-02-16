@@ -44,7 +44,7 @@ browser.storage.sync.get(null, function (data) {
         document.getElementById('next').onclick = function () {
             count += 1;
             passcodes.push(calculatePasscode(count));
-            document.getElementById('passcode').innerHTML = passcodes[count];
+            document.getElementById('passcode').innerText = passcodes[count];
             browser.storage.sync.set({ passcodes });
             browser.storage.sync.set({ count });
         };
@@ -56,14 +56,14 @@ browser.storage.sync.get(null, function (data) {
             }
             count -= 1;
             passcodes.pop();
-            document.getElementById('passcode').innerHTML = passcodes[count];
+            document.getElementById('passcode').innerText = passcodes[count];
             browser.storage.sync.set({ passcodes });
             browser.storage.sync.set({ count });
         };
 
         document.getElementById('copy').onclick = function () {
             navigator.clipboard.writeText(passcodes[count]);
-            document.getElementById('copy').innerHTML = 'Copied!';
+            document.getElementById('copy').innerText = 'Copied!';
         }
 
         let count = data.count;
