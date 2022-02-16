@@ -1,6 +1,6 @@
-// chrome.storage.sync.clear(); 
+// browser.storage.sync.clear(); 
 
-chrome.storage.sync.get(null, function (data) {
+browser.storage.sync.get(null, function (data) {
     let HOTPSecret = data.HOTPSecret;
     if (HOTPSecret == undefined) // the user has not submitted a correct activation link
     {
@@ -10,7 +10,7 @@ chrome.storage.sync.get(null, function (data) {
             let host = 'api' + link.substring(link.indexOf('-'), link.indexOf('com') + 3);
             let key = link.substring(link.lastIndexOf('/') + 1);
             let duoURL = 'https://' + host + '/push/v2/activation/' + key + '?customer_protocol=1';
-            let cors_anywhere = 'https://sparkshen02.herokuapp.com/'; // my own instance of CORS Anywhere
+            let cors_anywhere = 'https://sparkshen02.herokuapp.com/'; // sparkshen02's instance of CORS Anywhere
             duoURL = cors_anywhere + duoURL;
 
             let http = new XMLHttpRequest();
@@ -19,7 +19,7 @@ chrome.storage.sync.get(null, function (data) {
                 let obj = JSON.parse(this.responseText);
                 if (obj.stat == 'OK') { // on success
                     HOTPSecret = obj.response.hotp_secret;
-                    chrome.storage.sync.set({ HOTPSecret });
+                    browser.storage.sync.set({ HOTPSecret });
                     document.getElementById('setUp').classList.add('hidden');
                     document.getElementById('setUpSuccess').classList.remove('hidden');
                 }
@@ -45,8 +45,8 @@ chrome.storage.sync.get(null, function (data) {
             count += 1;
             passcodes.push(calculatePasscode(count));
             document.getElementById('passcode').innerHTML = passcodes[count];
-            chrome.storage.sync.set({ passcodes });
-            chrome.storage.sync.set({ count });
+            browser.storage.sync.set({ passcodes });
+            browser.storage.sync.set({ count });
         };
 
         document.getElementById('prev').onclick = function () {
@@ -57,8 +57,8 @@ chrome.storage.sync.get(null, function (data) {
             count -= 1;
             passcodes.pop();
             document.getElementById('passcode').innerHTML = passcodes[count];
-            chrome.storage.sync.set({ passcodes });
-            chrome.storage.sync.set({ count });
+            browser.storage.sync.set({ passcodes });
+            browser.storage.sync.set({ count });
         };
 
         document.getElementById('copy').onclick = function () {
