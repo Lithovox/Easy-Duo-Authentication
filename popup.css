@@ -44,7 +44,6 @@ a {
     font-size: 15px;
     display: block;
     outline: none;
-    border: none;
     padding: 8px 25px;
     border-radius: 25px;
     background: #ff5722;
@@ -65,7 +64,6 @@ a {
     background: #ff5722;
     color: #fff;
     outline: none;
-    border: none;
     margin-right: 3px;
 }
 
@@ -76,7 +74,6 @@ a {
     background: #ff5722;
     color: #fff;
     outline: none;
-    border: none; 
     margin-top: 7px;
     height: 35px;
 }
