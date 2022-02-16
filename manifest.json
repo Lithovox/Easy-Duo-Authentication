@@ -1,9 +1,10 @@
 {
-    "name": "Easy Duo Authentication",
+    "name": "Easy Duo Authentication for Firefox",
     "version": "1.0.3",
     "description": "Gives you passcodes for the Duo Multi-Factor Authentication.",
     "permissions": [
-        "storage"
+        "storage",
+		"clipboardWrite"
     ],
     "browser_action": {
         "default_popup": "popup.html", 
@@ -20,5 +21,11 @@
         "48": "images/unlock_icon48.png",
         "128": "images/unlock_icon128.png"
     },
+    "browser_specific_settings": {
+		"gecko": {
+			"id": "Easy-Duo-Authentication@Lithovox.github.io",
+			"strict_min_version": "79.0"
+		}
+	},
     "manifest_version": 2
 }
