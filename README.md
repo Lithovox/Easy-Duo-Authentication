@@ -1,10 +1,10 @@
-# Easy Duo Authentication
- 
-A Chrome extension that gives users passcodes for [the Duo Multi-Factor Authentication](https://guide.duo.com/prompt).
+# Easy Duo Authentication for Firefox
+
+A Firefox extension that gives users passcodes for [the Duo Multi-Factor Authentication](https://guide.duo.com/prompt).
+
+This extension is a lightly modified version of the [Easy Duo Authenticator](https://github.com/SparkShen02/Easy-Duo-Authentication) Chrome extension. See that extension for more details about the working principle and history. 
 
 <img src="screenshots/auth_demo.gif" width="600">
-
-Initially developed during the UCLA HOTH 8 Hackathon. 
 
 ## Overview
 
